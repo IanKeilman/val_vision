@@ -3,3 +3,6 @@
 /sampled_videos.txt
 /VODS
 /FilteredFrames
+/Classification_annotations
+/classification_dataset
+/xml_to_yolo.py
