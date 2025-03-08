@@ -1,0 +1,24 @@
+// YouTube Video Processing Pipeline
+digraph {
+	A [label="Download Video
+(yt-dlp)"]
+	B [label="Extract Frames"]
+	C [label="Gameplay Classification
+(YOLO Classifier)"]
+	D [label="Decision:
+Gameplay?"]
+	E [label="Crop Regions
+(Killfeed, Time, Minimap)"]
+	F [label="Object Detection
+(YOLO on Killfeed)"]
+	G [label="OCR on Detected Boxes"]
+	H [label="Discard Frame
+(Not Gameplay)" color=lightgrey shape=box style=filled]
+	A -> B
+	B -> C
+	C -> D
+	D -> E [label=Yes]
+	D -> H [label=No style=dashed]
+	E -> F [label="Killfeed Region"]
+	F -> G
+}

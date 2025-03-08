@@ -23,7 +23,7 @@ def format_folder_name(folder_name):
         return None
     
     first_word = parts[0]   # First word (e.g., VIT)
-    second_word = parts[1]  # Second word (e.g., DRX)
+    second_word = parts[2]  # Second word (e.g., DRX)
     last_two_words = "_".join(parts[-2:]).lower()  # Last two words (e.g., "map_01")
 
     return f"{first_word}_{second_word}_{last_two_words}"
