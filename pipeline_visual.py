@@ -25,5 +25,3 @@ dot.edge('F', 'G')
 # Render the graph to a file (e.g., pipeline_graph.png) and display it
 dot.render('pipeline_graph', view=True)
 
-# Optionally, print the DOT source
-print(dot.source)
